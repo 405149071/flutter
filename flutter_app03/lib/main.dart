@@ -1,40 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'text.dart';
+
 void main() {
-  runApp(MyApp());
-}
-
-// 重构demo
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Deom'),
-        ),
-        body: HomeContent(),
-      ),
-      theme: ThemeData(primarySwatch: Colors.yellow),
-    );
-  }
-}
-
-// 组件
-class HomeContent extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Center(
-      child: Text(
-        '你好flutte',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          color: Colors.yellow,
-          fontSize: 40.0,
-        ),
-      ),
-    );
-  }
+  runApp(TextApp());
 }
