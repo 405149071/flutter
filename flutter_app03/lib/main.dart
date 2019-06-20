@@ -11,7 +11,8 @@ import 'custombutton.dart';
 import 'row.dart';
 import 'expand.dart';
 import 'Example.dart';
+import 'stack.dart';
 
 void main() {
-  runApp(ExampleApp());
+  runApp(StackApp());
 }
