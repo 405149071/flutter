@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app03/text.dart';
 
 class ImageApp extends StatelessWidget {
   @override
