@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // 重构demo
-class TextApp extends StatelessWidget {
+class FirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

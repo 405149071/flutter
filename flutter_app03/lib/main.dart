@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'text.dart';
+import 'first.dart';
 
 void main() {
-  runApp(TextApp());
+  runApp(FirstApp());
 }
