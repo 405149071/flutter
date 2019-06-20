@@ -8,7 +8,7 @@ class FirstApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter Deom'),
+          title: Text('first Deom'),
         ),
         body: HomeContent(),
       ),
