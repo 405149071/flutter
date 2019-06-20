@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
       child: Text(
         '你好flutte',
         textDirection: TextDirection.ltr,
+        style: TextStyle(
+          color: Colors.red,
+          fontSize: 40.0,
+        ),
       ),
     );
   }
