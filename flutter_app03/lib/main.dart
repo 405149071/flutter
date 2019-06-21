@@ -18,7 +18,8 @@ import 'cardpic.dart';
 import 'wrap.dart';
 import 'stateful.dart';
 import 'statefullist.dart';
+import 'footbar.dart';
 
 void main() {
-  runApp(StatefullistApp());
+  runApp(FootbarApp());
 }
