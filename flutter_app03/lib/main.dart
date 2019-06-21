@@ -17,7 +17,8 @@ import 'card.dart';
 import 'cardpic.dart';
 import 'wrap.dart';
 import 'stateful.dart';
+import 'statefullist.dart';
 
 void main() {
-  runApp(StatefulApp());
+  runApp(StatefullistApp());
 }
