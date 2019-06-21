@@ -12,7 +12,8 @@ import 'row.dart';
 import 'expand.dart';
 import 'Example.dart';
 import 'stack.dart';
+import 'aspect.dart';
 
 void main() {
-  runApp(StackApp());
+  runApp(AspectApp());
 }
