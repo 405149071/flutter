@@ -16,7 +16,8 @@ import 'aspect.dart';
 import 'card.dart';
 import 'cardpic.dart';
 import 'wrap.dart';
+import 'stateful.dart';
 
 void main() {
-  runApp(WrapApp());
+  runApp(StatefulApp());
 }
