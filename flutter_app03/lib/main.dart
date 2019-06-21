@@ -14,7 +14,8 @@ import 'Example.dart';
 import 'stack.dart';
 import 'aspect.dart';
 import 'card.dart';
+import 'cardpic.dart';
 
 void main() {
-  runApp(CardApp());
+  runApp(CardPicApp());
 }
