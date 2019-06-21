@@ -27,6 +27,7 @@ class HomeContent extends StatelessWidget {
         spacing: 10,
         runSpacing: 10,
         alignment: WrapAlignment.start,
+        runAlignment: WrapAlignment.end, // 可以理解为交叉轴
         children: <Widget>[
           ButtonContainer("第一季"),
           ButtonContainer("第2季"),
