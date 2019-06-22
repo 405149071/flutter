@@ -23,8 +23,15 @@ class _HomePageState extends State<HomePage> {
             //   builder: (context) => SearchPage(),
             // ));
             // 2） 命名路由使用，不需要引入。dart，因为全局已经引入过了
-            Navigator.pushNamed(context, '/search');
+            // Navigator.pushNamed(context, '/search');
             // 3）命名路由及传参
+            Navigator.pushNamed(
+              context,
+              '/search',
+              arguments: {
+                "id": 123,
+              },
+            );
           },
           color: Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
