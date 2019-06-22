@@ -14,6 +14,7 @@ class _CategaryPageState extends State<CategaryPage> {
       child: RaisedButton(
         child: Text("跳转到表单页面并传值"),
         onPressed: () {
+          // 普通路由传参
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => FormPage(
