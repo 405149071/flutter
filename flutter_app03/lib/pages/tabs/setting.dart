@@ -14,14 +14,17 @@ class _SettingPageState extends State<SettingPage> {
         ListTile(
           title: Text("我是一个文本"),
         ),
-        ListTile(
-          title: Text("我是一个文本"),
+        RaisedButton(
+          child: Text("跳转到登陆页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/login");
+          },
         ),
-        ListTile(
-          title: Text("我是一个文本"),
-        ),
-        ListTile(
-          title: Text("我是一个文本"),
+        RaisedButton(
+          child: Text("跳转到注册页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/registerFirst");
+          },
         ),
       ],
     );
