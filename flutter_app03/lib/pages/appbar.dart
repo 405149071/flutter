@@ -6,14 +6,16 @@ class AppbarPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DefaultTabController(
+      //必须得配置，顶部显示得数量
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Appbar Demo"),
           // backgroundColor: Colors.red,
           // 前面放个图标
           // leading与返回只能显示一个，如果是二级页面则基本要保留返回
-          // leading: IconButton(
+          // leading: Icon Button(
           //   icon: Icon(Icons.menu),
           //   onPressed: () {
           //     print("menu");
@@ -34,8 +36,47 @@ class AppbarPage extends StatelessWidget {
               },
             ),
           ],
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(
+                text: "热门",
+              ),
+              Tab(
+                text: "推荐",
+              )
+            ],
+          ),
         ),
-        body: Text("111111"),
+        body: TabBarView(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                ListTile(
+                  title: Text("第一个tab"),
+                ),
+                ListTile(
+                  title: Text("第一个tab"),
+                ),
+                ListTile(
+                  title: Text("第一个tab"),
+                ),
+              ],
+            ),
+            ListView(
+              children: <Widget>[
+                ListTile(
+                  title: Text("第二个tab"),
+                ),
+                ListTile(
+                  title: Text("第二个tab"),
+                ),
+                ListTile(
+                  title: Text("第二个tab"),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
