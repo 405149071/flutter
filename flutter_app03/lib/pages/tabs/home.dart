@@ -39,12 +39,14 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           height: 10,
         ),
-        // RaisedButton(
-        //   child: Text("跳转到表单页面并传值"),
-        //   onPressed: () {},
-        //   color: Theme.of(context).accentColor,
-        //   textTheme: ButtonTextTheme.primary,
-        // )
+        RaisedButton(
+          child: Text("跳转到自定义tabbar"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/appbar");
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        )
       ],
     );
   }

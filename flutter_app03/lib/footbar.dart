@@ -38,6 +38,8 @@ class FootbarApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      // 去掉debug图标
+      debugShowCheckedModeBanner: false,
       // home 首页也提到routes里面去则用initialroute来指定
       initialRoute: "/",
       //home: Tabs(),

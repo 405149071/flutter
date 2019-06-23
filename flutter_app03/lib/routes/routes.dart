@@ -8,17 +8,20 @@ import '../pages/user/Login.dart';
 import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
+import '../pages/appbar.dart';
 
 final _routes = {
   '/': (context) => Tabs(),
   '/form': (context) => FormPage(),
   // arguments 是传参，不带arguments则不需要传参
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
+  //用户注册与登陆
   '/login': (context) => LoginPage(),
   '/registerFirst': (context) => RegisterFirstPage(),
   '/registerSecond': (context) => RegisterSecondPage(),
   '/registerThird': (context) => RegisterThirdPage(),
-  //用户注册与登陆
+  // appbar Demo
+  '/appbar': (context) => AppbarPage(),
 };
 // 定义onGenerateRoute方法用来监听事件
 //固定写法
