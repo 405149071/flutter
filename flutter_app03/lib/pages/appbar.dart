@@ -12,12 +12,13 @@ class AppbarPage extends StatelessWidget {
           title: Text("Appbar Demo"),
           // backgroundColor: Colors.red,
           // 前面放个图标
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              print("menu");
-            },
-          ),
+          // leading与返回只能显示一个，如果是二级页面则基本要保留返回
+          // leading: IconButton(
+          //   icon: Icon(Icons.menu),
+          //   onPressed: () {
+          //     print("menu");
+          //   },
+          // ),
           // 后面放个图标
           actions: <Widget>[
             IconButton(
