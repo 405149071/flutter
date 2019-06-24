@@ -124,6 +124,17 @@ class _FormdemoPageState extends State<FormdemoPage> {
                   subtitle: Text("女生"),
                   secondary: Icon(Icons.help),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Switch(
+                  value: this._flag,
+                  onChanged: (v) {
+                    setState(() {
+                      this._flag = v;
+                    });
+                  },
+                )
               ],
             ),
           ],
