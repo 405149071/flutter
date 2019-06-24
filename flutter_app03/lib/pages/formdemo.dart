@@ -9,6 +9,7 @@ class FormdemoPage extends StatefulWidget {
 class _FormdemoPageState extends State<FormdemoPage> {
   // 初始化的时候给表单赋值
   var _username = new TextEditingController();
+  var _flag = true;
 
   @override
   void initState() {
@@ -43,6 +44,29 @@ class _FormdemoPageState extends State<FormdemoPage> {
                   this._username.text = "张三";
                 },
               ),
+            ),
+            Checkbox(
+              value: this._flag,
+              onChanged: (v) {
+                setState(() {
+                  print(v);
+                  this._flag = v;
+                });
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CheckboxListTile(
+              value: this._flag,
+              onChanged: (v) {
+                setState(() {
+                  this._flag = v;
+                });
+              },
+              title: Text("标题"),
+              subtitle: Text("子标题"),
+              secondary: Icon(Icons.people),
             ),
           ],
         ),
