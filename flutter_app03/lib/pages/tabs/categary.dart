@@ -21,6 +21,7 @@ class _CategaryPageState extends State<CategaryPage> {
               Expanded(
                 flex: 1,
                 child: TabBar(
+                  isScrollable: true, // 导航菜单特别多的时候，允许左右滑动
                   tabs: <Widget>[
                     Tab(
                       text: "热销",
