@@ -70,6 +70,14 @@ class _HomePageState extends State<HomePage> {
           },
           color: Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
+        ),
+        RaisedButton(
+          child: Text("时间演示页面"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/date");
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
         )
       ],
     );

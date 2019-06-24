@@ -13,6 +13,7 @@ import '../pages/tabbarcontroller.dart';
 import '../pages/user.dart';
 import '../pages/button.dart';
 import '../pages/formdemo.dart';
+import '../pages/date.dart';
 
 final _routes = {
   '/': (context) => Tabs(),
@@ -34,6 +35,8 @@ final _routes = {
   '/button': (context) => ButtonPage(),
   //表单演示页面
   '/form': (context) => FormdemoPage(),
+  //时间演示页面
+  '/date': (context) => DatePage(),
 };
 // 定义onGenerateRoute方法用来监听事件
 //固定写法
