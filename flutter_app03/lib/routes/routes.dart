@@ -9,6 +9,7 @@ import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
 import '../pages/appbar.dart';
+import '../pages/tabbarcontroller.dart';
 
 final _routes = {
   '/': (context) => Tabs(),
@@ -22,6 +23,8 @@ final _routes = {
   '/registerThird': (context) => RegisterThirdPage(),
   // appbar Demo
   '/appbar': (context) => AppbarPage(),
+  // tabbarcontroller 实现的tabbar切换 （简单）
+  '/tabbarcontroller': (context) => TabbarContrllerPage(),
 };
 // 定义onGenerateRoute方法用来监听事件
 //固定写法
