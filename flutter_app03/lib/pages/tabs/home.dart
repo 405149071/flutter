@@ -54,6 +54,14 @@ class _HomePageState extends State<HomePage> {
           },
           color: Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
+        ),
+        RaisedButton(
+          child: Text("按钮演示"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/button");
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
         )
       ],
     );
