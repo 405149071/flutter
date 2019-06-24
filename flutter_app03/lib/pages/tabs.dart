@@ -51,6 +51,83 @@ class _TabsState extends State<Tabs> {
           ),
         ],
       ),
+      // 侧边栏
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            // Row(
+            //   children: <Widget>[
+            //     // 头部配置1 下边的组件bidrawerheader好
+            //     Expanded(
+            //       child: DrawerHeader(
+            //         child: Text("我时一个header"),
+            //         decoration: BoxDecoration(
+            //           color: Colors.yellow,
+            //           image: DecorationImage(
+            //             image: NetworkImage(
+            //                 "https://www.itying.com/images/flutter/2.png"),
+            //             fit: BoxFit.cover,
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+// 头部配置2
+            Row(
+              children: <Widget>[
+                // 头部配置1（可自由定义） 下边的组件bidrawerheader简单，只是格式固定
+                Expanded(
+                  child: UserAccountsDrawerHeader(
+                    accountName: Text("大地老师"),
+                    accountEmail: Text("405149071@qq.com"),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://www.itying.com/images/flutter/3.png"),
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.itying.com/images/flutter/2.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    otherAccountsPictures: <Widget>[
+                      Image.network(
+                          "https://www.itying.com/images/flutter/4.png"),
+                      Image.network(
+                          "https://www.itying.com/images/flutter/5.png"),
+                      Image.network(
+                          "https://www.itying.com/images/flutter/6.png"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text("我的空间"),
+            ),
+            Divider(), // 加入一根线
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: Text("用户中心"),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text("设置中心"),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
