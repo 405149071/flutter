@@ -10,10 +10,10 @@ class _FormdemoPageState extends State<FormdemoPage> {
   // 初始化的时候给表单赋值
   var _username = new TextEditingController();
   var _flag = true;
+  var _sex = 1;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     this._username.text = "初始值";
   }
@@ -59,6 +59,7 @@ class _FormdemoPageState extends State<FormdemoPage> {
             ),
             CheckboxListTile(
               value: this._flag,
+              selected: this._flag,
               onChanged: (v) {
                 setState(() {
                   this._flag = v;
@@ -67,6 +68,63 @@ class _FormdemoPageState extends State<FormdemoPage> {
               title: Text("标题"),
               subtitle: Text("子标题"),
               secondary: Icon(Icons.people),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: <Widget>[
+                Text("男"),
+                Radio(
+                  value: 1,
+                  groupValue: this._sex,
+                  onChanged: (v) {
+                    setState(() {
+                      this._sex = v;
+                    });
+                  },
+                ),
+                Text("女"),
+                Radio(
+                  value: 2,
+                  groupValue: this._sex,
+                  onChanged: (v) {
+                    setState(() {
+                      this._sex = v;
+                    });
+                  },
+                ),
+              ],
+            ),
+            RadioListTile(
+              value: 1,
+              selected: this._sex == 1, // 标题也被选择
+              groupValue: this._sex,
+              onChanged: (v) {
+                setState(() {
+                  this._sex = v;
+                });
+              },
+              title: Text("男"),
+              subtitle: Text("男生"),
+              secondary: Icon(Icons.help),
+            ),
+            Column(
+              children: <Widget>[
+                RadioListTile(
+                  value: 2,
+                  selected: this._sex == 2,
+                  groupValue: this._sex,
+                  onChanged: (v) {
+                    setState(() {
+                      this._sex = v;
+                    });
+                  },
+                  title: Text("女"),
+                  subtitle: Text("女生"),
+                  secondary: Icon(Icons.help),
+                ),
+              ],
             ),
           ],
         ),
