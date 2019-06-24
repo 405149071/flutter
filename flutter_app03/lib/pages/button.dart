@@ -9,6 +9,16 @@ class ButtonPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("按钮演示"),
       ),
+      // 底部浮动按钮
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: Colors.yellow,
+        onPressed: () {
+          print("浮动按钮");
+        },
+      ),
+      // 浮动按钮居中
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

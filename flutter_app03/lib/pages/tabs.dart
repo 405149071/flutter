@@ -24,6 +24,30 @@ class _TabsState extends State<Tabs> {
         title: Text('FlutterDemo'),
       ),
       body: this._pageList[this._currentIndex], // 和数据做关联
+      // 实现一个floatbutton 将分类换成类似闲鱼app的中间floatbutton
+      // 加上container方便控制大小及位置
+      floatingActionButton: Container(
+        height: 80,
+        width: 80,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.only(top: 20), // 往下推图标，盖住原来的分类图标
+        child: FloatingActionButton(
+          // 根据点击变更当前按钮颜色
+          backgroundColor: this._currentIndex == 1 ? Colors.red : Colors.grey,
+          child: Icon(Icons.add),
+          onPressed: () {
+            setState(() {
+              // 更改currentindex
+              this._currentIndex = 1;
+            });
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex, // 当前选中的栏目
         onTap: (int index) {
