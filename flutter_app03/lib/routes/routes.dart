@@ -10,6 +10,7 @@ import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
 import '../pages/appbar.dart';
 import '../pages/tabbarcontroller.dart';
+import '../pages/user.dart';
 
 final _routes = {
   '/': (context) => Tabs(),
@@ -25,6 +26,8 @@ final _routes = {
   '/appbar': (context) => AppbarPage(),
   // tabbarcontroller 实现的tabbar切换 （简单）
   '/tabbarcontroller': (context) => TabbarContrllerPage(),
+  // 用户中心
+  '/user': (context) => UserPage(),
 };
 // 定义onGenerateRoute方法用来监听事件
 //固定写法

@@ -117,6 +117,11 @@ class _TabsState extends State<Tabs> {
                 child: Icon(Icons.people),
               ),
               title: Text("用户中心"),
+              // 收缩侧边栏，同时打开用户中心
+              onTap: () {
+                Navigator.of(context).pop(); // 返回的时候，侧边栏消失
+                Navigator.pushNamed(context, '/user');
+              },
             ),
             Divider(),
             ListTile(
