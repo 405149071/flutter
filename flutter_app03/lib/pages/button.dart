@@ -123,7 +123,64 @@ class ButtonPage extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                child: Text("扁平按钮"),
+                color: Colors.blue,
+                textColor: Colors.yellow,
+                onPressed: () {},
+              ),
+              OutlineButton(
+                child: Text("outline按钮"),
+                onPressed: () {},
+                color: Colors.blue, // 就是无效果的
+              ),
+              MyButton(
+                text: "自定义按钮",
+                width: 60.0,
+                height: 30.0,
+                pressed: () {
+                  print("自定义按钮");
+                },
+              )
+            ],
+          ),
+          // iconbutton
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
         ],
+      ),
+    );
+  }
+}
+
+// 自定义按钮
+class MyButton extends StatelessWidget {
+  final text;
+  final pressed;
+  final width;
+  final height;
+  const MyButton({
+    this.text = "",
+    this.pressed = null,
+    this.height = 100.0,
+    this.width = 100.0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        width: this.width,
+        height: this.height,
+        child: RaisedButton(
+          child: Text(this.text),
+          onPressed: this.pressed,
+        ),
       ),
     );
   }
